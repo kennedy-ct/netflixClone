@@ -6,12 +6,13 @@
     color: white;
 }
 body{
-    position: absolute;
+    position: relative;
     width: 99vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     overflow-x: hidden;
+    z-index: -10;
 }
 .header{
     position: absolute;
@@ -51,8 +52,9 @@ body{
 }
 select{
     outline: none;  
+    cursor: pointer;
 }
-.fas{
+.border-language .fas{
     display: inline-block;
     padding-left: 10px;
     width: 18px;
@@ -107,9 +109,9 @@ select{
     width: 640px;
     height: 110px;
     color: white;
-    z-index: 10;
     text-align: center;
     margin-bottom: 100px;
+    z-index: 100000;
 }
 .main-content h1{  
     font-size: 3.125rem;
@@ -125,7 +127,9 @@ select{
     font-weight: 400;
     margin-bottom: 20px;
 }
-.get-started .email{
+.get-started .email{    
+    color: #303030;
+    outline: none;
     width: 450px;
     height: 40px;
     padding: 10px;
@@ -148,12 +152,15 @@ select{
     text-align: center;
     font-size: 1.625rem;
     color: white;
+    cursor: pointer;
 }
 .background-container .background-image{
+    z-index: -10;
     width: 100%;
     height: 100%;
 }
 .background-image img{
+    z-index: -10;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -161,6 +168,7 @@ select{
 }
 .background-container .background-gradient{
     position: absolute;
+    z-index: -10;
     top: 0;
     left: 0;
     width: 100%;
